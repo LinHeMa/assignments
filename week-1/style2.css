@@ -1,0 +1,17 @@
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	
+
+}
+
+@media (min-width: 1025px) {
+    .main-container{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+}
