@@ -19,6 +19,9 @@ nav {
   margin-left: 10px;
   margin-right: auto;
 }
+img{
+  max-width:min-content;
+}
 
 .nav_left {
   padding: 0px;
