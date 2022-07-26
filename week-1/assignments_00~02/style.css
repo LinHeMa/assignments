@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   /* container */
   body {
     margin: 0px;
@@ -96,7 +96,7 @@
     padding: 1rem;
   }
 }
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
+@media screen and (min-width: 800px) and (max-width: 1199px) {
   /* container */
   body {
     margin: 0px;
@@ -196,7 +196,7 @@
   }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   body {
     margin: 0px;
     display: flex;
@@ -303,7 +303,7 @@
   }
 }
 
-@media only screen and (max-width: 499.99px) {
+@media screen and (max-width: 499px) {
   body {
     margin: 0px;
     display: flex;
