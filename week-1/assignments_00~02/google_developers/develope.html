@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>自己刻的估狗開發者</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="develope_style.css">
@@ -22,13 +22,14 @@
 <body>
     <nav>
         <ul class="nav_left">
-            <li class="item item_1">
+            <li class="item item_1 ">
                 <span class="material-symbols-outlined">
                     menu
                 </span>
             </li>
             <li class="item item_2">
-                <img src="https://www.gstatic.com/devrel-devsite/prod/vdb149cdc08c87ab249cdebfec6395e8f073056d752ca9c2d285d3b8426fcfa32/developers/images/lockup.svg"
+                <img class="googleDev"
+                    src="https://www.gstatic.com/devrel-devsite/prod/vdb149cdc08c87ab249cdebfec6395e8f073056d752ca9c2d285d3b8426fcfa32/developers/images/lockup.svg"
                     alt="googleDev">
             </li>
         </ul>
@@ -51,54 +52,125 @@
         </ul>
     </nav>
     <header>
-        <img src="https://developers.google.com/events/images/women-founders.png">
-        <a class="slogan">Google for Startups Accelerator:Women Founders</a>
-        <div class="slogan_content"> Apply to a 10-week digital accelerator program for women founders leading high
-            potential Seed to Series A
-            tech startups based in the U.S. and Canada by July 28.
+        <img class="women" src="https://developers.google.com/events/images/women-founders.png">
+        <div class="header_content">
+            <h3 class="content slogan">
+                <a class=" ">Google for Startups Accelerator:Women Founders</a>
+            </h3>
+            <div class="content slogan_content"> Apply to a 10-week digital accelerator program for women founders
+                leading high
+                potential Seed to Series A
+                tech startups based in the U.S. and Canada by July 28.
+            </div>
+            <div class="content apply">
+                <a>Apply now</a>
+            </div>
         </div>
-        <button class="apply">Apply now</button>
     </header>
     <section class="dev_tool_secton">
+        <!-- <div class="dev_tool_container"> -->
         <h2 class="dev_tool_slogan">Build <b>anything</b> with Google</h2>
-        <ul class="dev_tool_icons">
-            <li class="dev_tool_icon dev_tool_icon_1">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_2">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_3">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_4">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_5">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_6">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_7">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_8">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_9">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_10">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_11">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-            <li class="dev_tool_icon dev_tool_icon_12">
-                <i class="fa-brands fa-android fa-2xl"></i>
-            </li>
-        </ul>
+        <div class="icons">
+            <div class="icon andriod">
+                <img src="https://developer.android.com/images/brand/Android_Robot_480.png" alt="">
+                <p class="andriod_text">Andriod</p>
+            </div>
+            <div class="icon google_cloud">
+                <img src="https://www.gstatic.com/images/branding/product/2x/google_cloud_64dp.png" alt="">
+                <p class="google_cloud_text">Google Cloud</p>
+            </div>
+            <div class="icon firebase">
+                <img src="https://www.gstatic.com/images/branding/product/2x/firebase_64dp.png" alt="">
+                <p class="firebase_text">firebase</p>
+            </div>
+            <div class="icon flutter">
+                <img src="https://www.gstatic.com/images/branding/product/2x/flutter_64dp.png" alt="">
+                <p class="flutter_text">Flutter</p>
+            </div>
+            <div class="icon google_assistant">
+                <img src="	https://www.gstatic.com/images/branding/product/2x/assistant_64dp.png" alt="">
+                <p class="google_assistant_text">Google Assistant</p>
+            </div>
+            <div class="icon maps_platform">
+                <img src="	https://www.gstatic.com/images/branding/product/2x/maps_64dp.png" alt="">
+                <p class="maps_platform_text">Maps Platform</p>
+            </div>
+            <div class="icon tensor_flow">
+                <img src="https://developers.google.com/site-assets/images/products/tensorflow-logo-196_480.png" alt="">
+                <p class='tensor_flow'>Tensor Flow</p>
+            </div>
+            <div class="icon web">
+                <img src="https://developers.google.com/web/images/web-fundamentals-icon192x192_480.png" alt="">
+                <p class="web_text">Web</p>
+            </div>
+            <div class="icon google_ads_icon">
+                <img src="https://developers.google.com/ads/images/ads_192px_clr.svg" alt="">
+                <p class="google_ads_icon">Google Ads</p>
+            </div>
+            <div class="icon chrome_os">
+                <img src="	https://developers.google.com/homepage-assets/images/chromeos-logo_480.png
+                " alt="">
+                <p class="chrome_os_text">Chrome OS</p>
+            </div>
+            <div class="icon google_play">
+                <img src="	https://www.gstatic.com/images/branding/product/2x/play_prism_64dp.png" alt="">
+                <p class="google_play_text">Google Play</p>
+            </div>
+            <div class="icon youtube">
+                <img src="	https://www.gstatic.com/images/branding/product/2x/youtube_64dp.png" alt="">
+                <p class="youtube_text">Youtube</p>
+            </div>
+        </div>
+        <div class="view_all_dev">
+            <a href="#" class="">
+                View all developer products
+            </a>
+        </div>
+        <!-- </div> -->
+    </section>
+    <section class="card_area">
+        <div class="card_outline">
+            <img class="grid_img" src="https://developers.google.com/site-assets/images/home/card-header-grid_720.png"
+                alt="">
+            <img class="event_img" src="https://developers.google.com/site-assets/images/home/events-graphic.png"
+                alt="">
+            <div class="card_text">
+                <h2>Events</h2>
+                <p>
+                    Bringing developers together in-person and online. Stay in the know about upcoming
+                    events,
+                    catch
+                    up on content you missed, and connect with Google experts.
+                </p>
+                <div class="card_btn">
+                    <a href="#">
+                        See events
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card_outline">
+            <img class="grid_img" src="https://developers.google.com/site-assets/images/home/card-header-grid_720.png"
+                alt="">
+            <img class="event_img" src="	https://developers.google.com/site-assets/images/home/community-graphic.png"
+                alt="">
+            <div class="card_text">
+                <h2>Community</h2>
+                <p>
+                    Bringing developers together in-person and online. Stay in the know about upcoming
+                    events,
+                    catch
+                    up on content you missed, and connect with Google experts.
+                </p>
+                <div class="card_btn_community">
+                    <a href="#">
+                        Find community
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 </body>
 
