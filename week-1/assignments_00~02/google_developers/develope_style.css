@@ -236,3 +236,26 @@ header {
   padding-bottom: 2%;
   width: 35%;
 }
+
+/* intro_card_group */
+.intro_card_section {
+  background-color: #f0f3f4;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.intro_card_group {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.intro_img {
+  width: 96px;
+}
+.intro_card {
+  border: solid 2px #eeefef;
+  width: 100%;
+  background-color: white;
+}
