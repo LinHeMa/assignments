@@ -1,1 +1,3 @@
 # assignments
+
+week 1 

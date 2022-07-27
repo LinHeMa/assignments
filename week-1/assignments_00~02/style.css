@@ -192,7 +192,7 @@
   }
 }
 
-@media screen and (min-width: 500px) and (max-width : 799.9px) {
+@media screen and (min-width: 500px) and (max-width: 799.9px) {
   body {
     margin: 0px;
     display: flex;
@@ -299,7 +299,7 @@
   }
 }
 
-@media screen and (max-width : 499.9px) {
+@media screen and (max-width: 499.9px) {
   body {
     margin: 0px;
     display: flex;
