@@ -1,0 +1,23 @@
+.bar {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  border: solid 2px black;
+}
+
+@keyframes loading {
+  from {
+    left: 5px;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+.progress {
+  background-color: orange;
+  animation-name: loading;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
