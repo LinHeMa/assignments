@@ -44,16 +44,15 @@ console.log("(3) discountedPrice : ", discountedPrice);
 // assignment 4
 console.log(`==========assignment 4==========`);
 function twoSum(nums, target) {
-  let numsSorted = nums.sort((a, b) => a - b);
-  for (let i = 0; i < numsSorted.length; i++) {
-    let another = target - numsSorted[i];
-    if (numsSorted.includes(another)) {
-      return [nums.indexOf(numsSorted[i]), nums.indexOf(another)];
+  for (let i = 0; i < nums.length; i++) {
+    let another = target - nums[i];
+    if (nums.includes(another)) {
+      return [nums.indexOf(nums[i]), nums.indexOf(another)];
     }
   }
 }
 
-console.log("(4) twoSum([2,7,11,15],26) : ", twoSum([2, 7, 11, 15], 18));
+console.log("(4) twoSum([2,7,11,15],9) : ", twoSum([2, 7, 11, 15], 9));
 
 // assignment 5
 console.log(`==========assignment 5==========`);
