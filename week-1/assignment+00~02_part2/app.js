@@ -12,7 +12,8 @@ console.log(`==========assignment 2==========`);
 function calculate(args) {
   if (args.op === "+") {
     return args.n1 + args.n2;
-  } else if (args.op === "-") {
+  }
+  if (args.op === "-") {
     return args.n1 - args.n2;
   }
   return "Not supported";
@@ -26,7 +27,6 @@ console.log(`==========assignment 3==========`);
 
 function calculate_3(data) {
   const ans = data.products.reduce((acc, cur) => (acc += cur.price * 0.1), 0);
-  return ans;
 }
 
 const discountedPrice = calculate_3({
@@ -44,7 +44,7 @@ console.log("(3) discountedPrice : ", discountedPrice);
 console.log(`==========assignment 4============`);
 function twoSum(nums, target) {
   for (let i = 0; i < nums.length; i++) {
-    let another = target - nums[i];
+    const another = target - nums[i];
     if (nums.includes(another)) {
       return [nums.indexOf(nums[i]), nums.indexOf(another)];
     }
