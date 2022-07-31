@@ -9,11 +9,11 @@ function practice_1(input) {
   }
   return obj;
 }
+
+console.log(practice_1(input1));
 // 必須要多加注意
 // const o = {};
 // console.log({ a: 0, ...o });
-
-console.log(practice_1(input1));
 
 console.log("Q2 starts here!!!");
 
@@ -43,12 +43,20 @@ function practice_3(input) {
     {}
   );
   for (let i = 0; i < input.length; i++) {
-    if (object.hasOwnProperty(input[i].key)) {
+    if (input[i].key in object) {
       object[input[i].key].push(input[i].value);
     }
   }
   return object;
 }
+// function practice_3(input) {
+//   const object = input.reduce((obj, item) => {
+//     obj[item.key] = obj[item.key] || [];
+//     obj[item.key].push(item.value);
+//     return obj;
+//   }, {});
+//   return object;
+// }
 console.log(practice_3(input3));
 
 console.log("Q4 starts here!!!");
@@ -61,6 +69,7 @@ const input4 = [
   { key: "c", value: 5 },
 ];
 
+//第四題原版
 function practice_4(input) {
   let object = input.reduce(
     (obj, item) => Object.assign(obj, { [item.key]: 0 }),
@@ -74,8 +83,8 @@ function practice_4(input) {
   return object;
 }
 console.log(practice_4(input4));
-
 console.log("Q5 starts here!!!");
+const objectTest = { student_id: 0, name: "", object: [] };
 
 const students = [
   { student_id: 1, name: "Arthur" },
@@ -91,7 +100,7 @@ const student_objects = [
 ];
 
 function practice_5(students, student_objects) {
-  students.map((ele) => (ele.object = []));
+  students.forEach((ele) => (ele.object = []));
   for (let i = 0; i < students.length; i++) {
     for (let j = 0; j < student_objects.length; j++) {
       if (student_objects[j].student_id === students[i].student_id) {
@@ -102,3 +111,20 @@ function practice_5(students, student_objects) {
   return students;
 }
 console.log(practice_5(students, student_objects));
+
+// 改;
+const practice_5_beta = (students, student_objects) => {
+  const reorganized = student_objects.reduce(
+    (accumu, { student_id, object }) => {
+      accumu[student_id] = [...(accumu[student_id] ?? ""), object];
+      return accumu;
+    },
+    {}
+  );
+  return students.map((student) => ({
+    ...student,
+    object: reorganized[student.student_id],
+  }));
+};
+
+console.log(practice_5_beta(students, student_objects));
