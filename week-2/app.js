@@ -11,9 +11,8 @@ welcomeMsg.addEventListener("click", welcomeMsgHandler);
 
 //關閉功能
 const menu = document.getElementsByClassName("nav_menu")[0];
-console.log(menu);
 const menuCross = document.getElementsByClassName("menu_cross")[0];
-console.log(menuCross);
+
 const closeMenu = () => {
   menu.classList.remove("active");
 };
@@ -21,7 +20,6 @@ menuCross.addEventListener("click", closeMenu);
 
 //選單功能
 const toggleBtn = document.querySelector(".toggle_btn");
-console.log(toggleBtn);
 const toggle = () => {
   menu.classList.add("active");
 };
@@ -47,9 +45,21 @@ ajax(dataUrl)
   .then((response) => {
     return response.json();
   })
-  .then((response) => console.log(response))
+  .then((response) => render(response))
   .catch((error) => {
     console.log(`Error: ${error}`);
   });
-function render(data) {}
+function render(data) {
+  let words = "";
+  for (ele of data) {
+    words += `<tr>
+    <td>${ele.name}</td>
+    <td>${ele.description}</td>
+    <td>${ele.price}</td>
+    </tr>
+    `;
+  }
+  document.querySelector(".table tbody").innerHTML = words;
+}
+
 // AJAX ends
