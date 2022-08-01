@@ -1,0 +1,253 @@
+/* container */
+#welcome {
+  width: 100%;
+  height: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  background-color: #d2e9ff;
+}
+
+/* navbar fiexd on top */
+
+#nav_menu_icon {
+  display: none;
+}
+.nav_li > a {
+  text-align: left;
+}
+
+.nav_li_home {
+  float: left;
+}
+
+.nav_li_home > a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav_li > a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to burlywood on hover */
+
+/* content */
+h2 {
+  text-align: center;
+}
+.content {
+  max-width: 1200px;
+  display: flex;
+  list-style-type: none;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+.content_box {
+  width: 48%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding-bottom: 300px;
+  text-align: center;
+  background-color: gray;
+}
+
+.box2,
+.box4 {
+  margin-right: 0;
+}
+
+.more_content {
+  display: none;
+}
+
+.nav_li .menu_cross {
+  display: none;
+}
+.nav_ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.more_content.active {
+  display: flex;
+}
+
+button {
+  background-color: #ecf5ff;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1199.9px) {
+  /* content */
+  .content_box {
+    width: 48%;
+  }
+
+  .more_content {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 799.9px) {
+  /* navbar fiexd on top */
+  #nav {
+    width: 100%;
+  }
+  .nav_ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+
+  .menu {
+    position: fixed;
+    right: 0;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: white;
+  }
+
+  #nav_menu_icon {
+    display: block;
+  }
+
+  #nav_menu_icon > a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+  }
+
+  .nav_li > a {
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nav_menu {
+    display: none;
+  }
+  .nav_menu.active {
+    display: block;
+  }
+  .li_with_x {
+    display: flex;
+  }
+  .nav_li .menu_cross {
+    display: block;
+  }
+  .menu_cross {
+    margin-left: auto;
+  }
+
+  /* Change the link color to burlywood on hover */
+
+  #welcome {
+    width: 100%;
+    height: 30%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    background-color: #d2e9ff;
+  }
+  /* content */
+
+  .more_content {
+    display: none;
+  }
+
+  .content_box {
+    width: 47%;
+    text-align: center;
+    background-color: gray;
+  }
+
+  button {
+    background-color: #ecf5ff;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 499.9px) {
+  .content_box {
+    width: 98%;
+    margin-right: 0;
+  }
+}
+/* navbar fiexd on top */
+#nav {
+  width: 100%;
+}
+
+/* .nav_li_home {
+    display: flex;
+    justify-content: space-between;
+  } */
+#nav_menu_icon {
+  align-self: center;
+  margin-right: 0;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+#nav_menu_icon > a {
+  padding: 14px 16px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+.menu {
+  color: black;
+}
+/* Change the link color to burlywood on hover */
+
+#welcome {
+  width: 100%;
+  height: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  background-color: #d2e9ff;
+}
+/* content */
+
+button {
+  background-color: #ecf5ff;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+}
