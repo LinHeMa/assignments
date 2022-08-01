@@ -1,6 +1,5 @@
 const dataUrl =
   "https://appworks-school.github.io/Remote-Aassigiment-Data/products";
-const xhr = new XMLHttpRequest();
 
 function ajax(url) {
   return fetch(url);
