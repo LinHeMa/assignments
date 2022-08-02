@@ -1,17 +1,11 @@
-const dataUrl =
-  "https://appworks-school.github.io/Remote-Aassigiment-Data/products";
+// const dataUrl =
+//   "https://appworks-school.github.io/Remote-Aassigiment-Data/products";
 
 function ajax(url) {
-  return fetch(url);
-}
-ajax(dataUrl)
-  .then((response) => {
+  return fetch(url).then((response) => {
     return response.json();
-  })
-  .then((response) => render(response))
-  .catch((error) => {
-    console.log(`Error: ${error}`);
   });
+}
 function render(data) {
   let words = "";
   for (ele of data) {
@@ -24,3 +18,8 @@ function render(data) {
   }
   document.querySelector(".table tbody").innerHTML = words;
 }
+ajax("https://appworks-school.github.io/Remote-Assignment-Data/products")
+  .then((data) => render(data))
+  .catch((error) => {
+    console.log(`Error: ${error}`);
+  });
