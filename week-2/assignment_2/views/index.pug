@@ -1,0 +1,7 @@
+extends layout.pug 
+
+block content 
+        section#content 
+            h2 歡迎 #{name}！
+        form(action='/goodbye', method='post')
+            button(type='submit') 清除

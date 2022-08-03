@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sum </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+   <input type="text" name="number" id="number"> 
+   <button onclick='getSum()'>計算</button>
+   <span class="output"></span>
+    
+    <script async defer>
+      const inputValue = document.querySelector('#number')
+      const output = document.querySelector('.output')
+      
+      const getSum = async() => {
+        console.log(inputValue.value)
+        const num = await fetch(`http://localhost:3000/getData?number=${inputValue.value}`).then(response=>response.json())
+        output.textContent = num 
+        // console.log(num)
+        
+      }
+    </script>
+  </body>
+</html>
