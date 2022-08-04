@@ -24,15 +24,9 @@ app.set('query parser', (str) => qs.parse(str))
 
 // middleware
 app.use((req, res, next) => {
-  console.log('middleware', req.body)
-  // console.log(res.query.number)
   req.message = 'passing'
   next()
 })
-// app.use((req, res, next) => {
-//   console.log(req.message)
-//   next()
-// })
 
 app.get('/', (req, res) => {
   const name = req.cookies.username
@@ -40,11 +34,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/getData', (req, res) => {
-  console.log('get', req.query.number)
   const isNum = !isNaN(req.query.number)
   const querynumber = Number(req.query.number)
   const total = ((querynumber + 1) * querynumber) / 2
-  console.log(isNum)
   if (req.query.number === undefined) res.send({ message: 'Lack of Parameter' })
   isNum ? res.send({ message: total }) : res.send({ message: 'Wrong parameter' })
 })
