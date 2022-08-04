@@ -4,22 +4,23 @@ const cookieParser = require('cookie-Parser')
 const qs = require('qs')
 const app = express()
 const mainPort = 3000
-const colors = ['#D9DBF1',
+const colors = [
+  '#D9DBF1',
   '#D0CDD7',
   '#ACB0BD',
   '#416165',
   '#0B3948',
   '#FCEFF9',
   '#95D7AE',
-  '#73956F']
+  '#73956F'
+]
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app.set('view engine', 'pug')
-app.set('query parser',
-  (str) => qs.parse(str))
+app.set('query parser', (str) => qs.parse(str))
 
 // middleware
 app.use((req, res, next) => {
@@ -42,14 +43,11 @@ app.get('/getData', (req, res) => {
   console.log('get', req.query.number)
   const isNum = !isNaN(req.query.number)
   const querynumber = Number(req.query.number)
-  const total = (querynumber + 1) * querynumber / 2
+  const total = ((querynumber + 1) * querynumber) / 2
   console.log(isNum)
-  // if (req.query.number === undefined)res.send('<h1>Lack of Parameter</h1>')
-  // isNum ? res.send(`<h1>您所要求的數字為：${total}</h1>`) : res.send('<h1>Wrong parameter</h1>')
-  res.send(JSON.stringify(total))
+  if (req.query.number === undefined) res.send({ message: 'Lack of Parameter' })
+  isNum ? res.send({ message: total }) : res.send({ message: 'Wrong parameter' })
 })
-
-// app.get('/sum.html')
 
 app.get('/cards', (req, res) => {
   res.locals.prompt = '誰是馬伊隆？'
