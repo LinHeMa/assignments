@@ -2,11 +2,13 @@ extends layout.pug
 
 block content  
   section#content 
-    ul 
-      each color in colors 
-        li= color
-    h2= prompt
-        if hint
+    h2= text
+        if side==='question'
             p 
                 i Hint: #{hint}
-
+            a(href=`http://localhost:3000/cards/${id}?side=answer`) answer
+        if side==='answer'
+            p
+            a(href=`http://localhost:3000/cards/${id}?side=question`) question
+    br
+    a(href="/cards")  Begin
