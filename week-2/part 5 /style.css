@@ -1,0 +1,137 @@
+/* 基本css語法 */
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* =================================================================================== */
+/* 1200px 以上 */
+/* header & nav */
+/* 容器 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 左邊 */
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+}
+
+.logo > a {
+  font-size: 1rem;
+}
+
+/* 右邊 */
+.nav {
+  display: flex;
+}
+
+.nav_item {
+  margin-right: 2vw;
+}
+
+.nav_item > a,
+span {
+  display: block;
+  padding: 2vh 2vw;
+}
+.nav_item > span {
+  font-size: 18px;
+}
+
+@media (min-width: 800px) {
+  .nav_menu {
+    display: none;
+  }
+}
+/* ================================================================================== */
+/* banner */
+
+.banner {
+  padding: 100px 0px;
+  background-color: rgb(166, 210, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================================================================== */
+/* body */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body_title {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.content_box_ul {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content_box {
+  background-color: gray;
+  padding-bottom: 14vh;
+  text-align: center;
+  width: 45%;
+  margin: 1vw;
+}
+
+.call_to_action {
+  background-color: #ecf5ff;
+  margin-top: 3vh;
+  padding: 2vh 1vw;
+}
+
+@media screen and (max-width: 1199.9px) {
+  /* body */
+  .content_box_ul {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 799.9px) {
+  /* nav */
+  .nav_item {
+    display: none;
+  }
+  .nav_menu > span {
+    padding: 2vh 5vw;
+  }
+  /* body */
+}
+
+@media screen and (max-width: 499.9px) {
+  .content_box_ul {
+    width: 100%;
+  }
+  .content_box {
+    width: 90%;
+    margin: 3vw;
+  }
+}
