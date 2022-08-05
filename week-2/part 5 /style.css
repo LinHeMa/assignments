@@ -16,6 +16,9 @@ a {
   text-decoration: none;
   color: black;
 }
+button {
+  border: 0px;
+}
 
 /* =================================================================================== */
 /* 1200px 以上 */
@@ -43,25 +46,24 @@ a {
 .nav {
   display: flex;
 }
-
+.nav_menu {
+  display: none;
+}
 .nav_item {
   margin-right: 2vw;
 }
 
-.nav_item > a,
-span {
+.nav_item > a {
   display: block;
   padding: 2vh 2vw;
 }
+
 .nav_item > span {
   font-size: 18px;
+  display: block;
+  padding: 2vh 2vw;
 }
 
-@media (min-width: 800px) {
-  .nav_menu {
-    display: none;
-  }
-}
 /* ================================================================================== */
 /* banner */
 
@@ -107,6 +109,9 @@ span {
   margin-top: 3vh;
   padding: 2vh 1vw;
 }
+.nav_item .cross {
+  display: none;
+}
 
 @media screen and (max-width: 1199.9px) {
   /* body */
@@ -117,11 +122,33 @@ span {
 
 @media screen and (max-width: 799.9px) {
   /* nav */
-  .nav_item {
+  /* .nav_item {
     display: none;
+  } */
+  .nav {
+    background-color: white;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 10;
+  }
+  .nav_item .cross {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+  }
+  .nav_menu {
+    display: block;
   }
   .nav_menu > span {
     padding: 2vh 5vw;
+  }
+  .show {
+    display: block;
   }
   /* body */
 }
