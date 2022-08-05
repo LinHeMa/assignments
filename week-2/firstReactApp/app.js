@@ -29,7 +29,7 @@ const Player = (props) => {
       >
         X
       </button>
-      <span className='palyer-name'>{props.name}</span>
+      <span className='player-name'>{props.name}</span>
       <Counter />
     </div>
   )
