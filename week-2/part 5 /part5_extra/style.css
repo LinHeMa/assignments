@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.addCounter{
+  border: 2px solid green;
+  color: wheat;
+  background-color: green;
+  border-radius: 8%;
+  padding: 10px;
+}
+
+.addAllCounters{
+  border: 2px solid blue;
+  color: wheat;
+  background-color: blue;
+  border-radius: 8%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.counter{
+  margin-top: 50px;
+  text-align: center;
+  border: 5px solid purple;
+  border-radius: 8%;
+  color: wheat;
+  background-color: purple;
+}
+
+.add{
+  border: 1px solid purple;
+  background-color: blue;
+  text-align: center;
+}
+
+.reset{
+  margin-top: 10px;
+  border: 1px solid red;
+  background-color: red;
+  text-align: center;
+}
