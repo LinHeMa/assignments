@@ -21,10 +21,10 @@ const Header = () => {
   const showMenuHandler = () => {
     if (navClass.isShow) {
       setShow(navClass.close)
-      navClass.isShow = false
+      navClass.isShow = !navClass.isShow
     } else {
       setShow(navClass.open)
-      navClass.isShow = true
+      navClass.isShow = !navClass.isShow
     }
   }
 
