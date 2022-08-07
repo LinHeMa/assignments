@@ -3,6 +3,7 @@ const { createRoot } = ReactDOM
 const { useState, useEffect } = React
 const container = document.getElementById('root')
 const root = createRoot(container)
+const navClass = { isShow: true, open: 'show', close: '' }
 
 function MyApp() {
   return (
@@ -16,17 +17,14 @@ function MyApp() {
 
 // nav bar
 const Header = () => {
-  const navClass = { open: 'nav show', close: 'nav' }
-  const [isShow, setIsShow] = useState(false)
   const [show, setShow] = useState(navClass.close)
   const showMenuHandler = () => {
-    if (isShow) {
+    if (navClass.isShow) {
       setShow(navClass.close)
-      setIsShow(false)
-    }
-    if (!isShow) {
+      navClass.isShow = false
+    } else {
       setShow(navClass.open)
-      setIsShow(true)
+      navClass.isShow = true
     }
   }
 
@@ -48,12 +46,8 @@ const Header = () => {
 }
 
 const NavList = (props) => {
-  // const closeMenuHandler = () => {
-  //   const navList = document.querySelector('.nav')
-  //   navList.classList.remove('show')
-  // }
   return (
-    <ul className={props.class}>
+    <ul className={`nav ${props.class}`}>
       <li className='nav_item first'>
         <a href='#'>item1</a>
         <a href='#' className='cross' onClick={props.showMenuHandler}>
