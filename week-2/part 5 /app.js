@@ -16,9 +16,18 @@ function MyApp() {
 
 // nav bar
 const Header = () => {
+  const navClass = { open: 'nav show', close: 'nav' }
+  const [isShow, setIsShow] = useState(false)
+  const [show, setShow] = useState(navClass.close)
   const showMenuHandler = () => {
-    const navList = document.querySelector('.nav')
-    navList.classList.add('show')
+    if (isShow) {
+      setShow(navClass.close)
+      setIsShow(false)
+    }
+    if (!isShow) {
+      setShow(navClass.open)
+      setIsShow(true)
+    }
   }
 
   return (
@@ -32,22 +41,22 @@ const Header = () => {
         <button className='nav_menu' onClick={showMenuHandler}>
           <span className='material-symbols-outlined'>menu</span>
         </button>
-        <NavList />
+        <NavList class={show} showMenuHandler={showMenuHandler} />
       </div>
     </div>
   )
 }
 
-const NavList = () => {
-  const closeMenuHandler = () => {
-    const navList = document.querySelector('.nav')
-    navList.classList.remove('show')
-  }
+const NavList = (props) => {
+  // const closeMenuHandler = () => {
+  //   const navList = document.querySelector('.nav')
+  //   navList.classList.remove('show')
+  // }
   return (
-    <ul className='nav'>
+    <ul className={props.class}>
       <li className='nav_item first'>
         <a href='#'>item1</a>
-        <a href='#' className='cross' onClick={closeMenuHandler}>
+        <a href='#' className='cross' onClick={props.showMenuHandler}>
           X
         </a>
       </li>
@@ -66,9 +75,22 @@ const NavList = () => {
 
 //banner
 const Banner = () => {
+  const [title, setTitle] = useState(true)
+  const handleTitleChange = () => {
+    title ? setTitle(false) : setTitle(true)
+  }
+
   return (
     <div className='banner'>
-      <h2 className='banner_title'>Welcome Message</h2>
+      {title ? (
+        <h2 className='banner_title' onClick={handleTitleChange}>
+          Welcome Message
+        </h2>
+      ) : (
+        <h2 className='banner_title' onClick={handleTitleChange}>
+          Have a Good Time
+        </h2>
+      )}
     </div>
   )
 }
